@@ -6,12 +6,19 @@ const Home: NextPage = () => (
   <div className={styles.container}>
     <Head>
       <title>Andrej Staš</title>
-      <meta name="description" content="Information about Willion s.r.o." />
+      <meta name="description" content="Who is Andrej Staš?" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
     <main className={styles.main}>
-      <h1 className={styles.title}>Andrejstas.com</h1>
+      <h1 className={styles.title}>AndrejStas.com</h1>
+
+      <section className={styles.description}>
+        <p>
+          I am a developer specialized in React, React Native, and Fastify. A
+          passionate traveler and a Vespa scooter enthusiast.
+        </p>
+      </section>
 
       <div className={styles.grid}>
         <a
@@ -20,7 +27,7 @@ const Home: NextPage = () => (
           className={styles.card}
           rel="noreferrer"
         >
-          <h2>LinkedIn profile</h2>
+          <h2>LinkedIn profile &rarr;</h2>
           <p>My work experience</p>
         </a>
         <a
@@ -29,7 +36,7 @@ const Home: NextPage = () => (
           className={styles.card}
           rel="noreferrer"
         >
-          <h2>Stories.land</h2>
+          <h2>Stories.land &rarr;</h2>
           <p>Travel blog</p>
         </a>
         <a
