@@ -121,3 +121,25 @@
     flex-direction: column;
   }
 }
+
+.clients {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* Odstup medzi logami */
+}
+
+.logo {
+  width: auto;
+  height: auto; /* zachová pomer strán */
+}
