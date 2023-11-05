@@ -108,6 +108,13 @@
   margin-left: 0.5rem;
 }
 
+.pronunciation {
+  font-size: 0.9rem;
+  color: #666666;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

@@ -11,7 +11,8 @@ const Home: NextPage = () => (
     </Head>
 
     <main className={styles.main}>
-      <h1 className={styles.title}>AndrejStas.com</h1>
+      <h1 className={styles.title}>Hi 👋 My name is Andrej Staš.</h1>
+      <p className={styles.pronunciation}>Pronounced: "Ahn-dray Stahsh"</p>
 
       <section className={styles.description}>
         <p>
