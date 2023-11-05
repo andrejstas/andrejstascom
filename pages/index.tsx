@@ -16,6 +16,24 @@ const Home: NextPage = () => (
       <div className={styles.grid}>
         <a
           target="_blank"
+          href="https://www.linkedin.com/in/andrejstas/"
+          className={styles.card}
+          rel="noreferrer"
+        >
+          <h2>LinkedIn profile</h2>
+          <p>My work experience</p>
+        </a>
+        <a
+          target="_blank"
+          href="https://stories.land"
+          className={styles.card}
+          rel="noreferrer"
+        >
+          <h2>Stories.land</h2>
+          <p>Travel blog</p>
+        </a>
+        <a
+          target="_blank"
           href="https://willion.sk"
           className={styles.card}
           rel="noreferrer"
