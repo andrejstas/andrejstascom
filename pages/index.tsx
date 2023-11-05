@@ -5,8 +5,12 @@ import styles from "../styles/Home.module.css";
 const Home: NextPage = () => (
   <div className={styles.container}>
     <Head>
-      <title>Andrej Staš</title>
-      <meta name="description" content="Who is Andrej Staš?" />
+      <title>Andrej Staš - web and mobile developer</title>
+      <meta
+        name="description"
+        content="I am a developer specialized in React, React Native, and Fastify. A
+          passionate traveler and a Vespa scooter enthusiast."
+      />
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
