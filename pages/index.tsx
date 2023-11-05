@@ -99,7 +99,7 @@ const Home: NextPage = () => (
           rel="noreferrer"
         >
           <h2>LinkedIn profile &rarr;</h2>
-          <p>My work experience</p>
+          <p>My CV and work experience</p>
         </a>
         <a
           target="_blank"
