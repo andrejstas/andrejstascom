@@ -12,6 +12,7 @@ const Home: NextPage = () => (
 
     <main className={styles.main}>
       <h1 className={styles.title}>Hi 👋 My name is Andrej Staš.</h1>
+      {/* eslint-disable-next-line react/no-unescaped-entities */}
       <p className={styles.pronunciation}>Pronounced: "Ahn-dray Stahsh"</p>
 
       <section className={styles.description}>
