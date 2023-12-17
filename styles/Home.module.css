@@ -136,10 +136,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem; /* Odstup medzi logami */
+  align-items: center;
+  gap: 1rem;
 }
 
 .logo {
   width: auto;
-  height: auto; /* zachová pomer strán */
+  height: auto;
 }
