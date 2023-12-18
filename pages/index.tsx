@@ -30,7 +30,7 @@ const Home: NextPage = () => (
       <title>Andrej Staš - web and mobile developer</title>
       <meta
         name="description"
-        content="I am a developer specialized in React, React Native, and Fastify. A
+        content="I am a senior developer specialized in React, React Native, and Fastify. A
           passionate traveler and a Vespa scooter enthusiast."
       />
       <link rel="icon" href="/favicon.ico" />
