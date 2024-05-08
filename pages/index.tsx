@@ -44,7 +44,7 @@ const Home: NextPage = () => (
       <section className={styles.description}>
         <p>
           I am a developer specialized in React, React Native, and Fastify. A
-          passionate traveler and a Vespa scooter enthusiast.
+          passionate traveler and a motorbike enthusiast.
         </p>
       </section>
 
