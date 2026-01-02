@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 // eslint-disable-next-line import/no-named-default
 import { default as NImage } from "next/image";
+import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 
 const ImageWrapper = ({
@@ -24,6 +25,25 @@ const ImageWrapper = ({
   </a>
 );
 
+const ObfuscatedEmail = () => {
+  const [email, setEmail] = useState<string>("");
+  const [href, setHref] = useState<string>("");
+
+  useEffect(() => {
+    const parts = ["hello", "@", "andrejstas", ".", "com"];
+    const decodedEmail = parts.join("");
+    setEmail(decodedEmail);
+    setHref(`mailto:${decodedEmail}`);
+  }, []);
+
+  return (
+    <a href={href} className={styles.card}>
+      <h2>Email me &rarr;</h2>
+      <p>{email || "Loading..."}</p>
+    </a>
+  );
+};
+
 const Home: NextPage = () => (
   <div className={styles.container}>
     <Head>
@@ -43,8 +63,9 @@ const Home: NextPage = () => (
 
       <section className={styles.description}>
         <p>
-          I am a developer specialized in React, React Native, and Fastify. A
-          passionate traveler and a motorbike enthusiast.
+          I build things with React, React Native, and Fastify. <br />I also
+          travel a lot, ride motorcycles, and pretend I know what I’m doing when
+          home renovating—sometimes even enjoying it.
         </p>
       </section>
 
@@ -99,26 +120,25 @@ const Home: NextPage = () => (
           rel="noreferrer"
         >
           <h2>LinkedIn profile &rarr;</h2>
-          <p>My CV and work experience</p>
+          <p>CV and work experience</p>
         </a>
-        <a
-          target="_blank"
-          href="https://stories.land"
-          className={styles.card}
-          rel="noreferrer"
-        >
+        <a target="_blank" href="https://flatr.cz" className={styles.card}>
+          <h2>Flatr.cz &rarr;</h2>
+          <p>AI analysis of Prague apartments</p>
+        </a>
+        <a target="_blank" href="https://v67.cz" className={styles.card}>
+          <h2>V67.cz &rarr;</h2>
+          <p>Apartment renovation blog</p>
+        </a>
+        <a target="_blank" href="https://stories.land" className={styles.card}>
           <h2>Stories.land &rarr;</h2>
-          <p>My travel blog</p>
+          <p>Travel blog</p>
         </a>
-        <a
-          target="_blank"
-          href="https://willion.sk"
-          className={styles.card}
-          rel="noreferrer"
-        >
+        <a target="_blank" href="https://willion.sk" className={styles.card}>
           <h2>Willion.sk &rarr;</h2>
           <p>My company</p>
         </a>
+        <ObfuscatedEmail />
       </div>
     </main>
   </div>
