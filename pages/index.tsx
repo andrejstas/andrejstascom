@@ -3,6 +3,7 @@ import Head from "next/head";
 // eslint-disable-next-line import/no-named-default
 import { default as NImage } from "next/image";
 import { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/next";
 import styles from "../styles/Home.module.css";
 
 const ImageWrapper = ({
@@ -55,6 +56,7 @@ const Home: NextPage = () => (
       />
       <link rel="icon" href="/favicon.ico" />
     </Head>
+    <Analytics />
 
     <main className={styles.main}>
       <h1 className={styles.title}>Hi 👋 My name is Andrej Staš.</h1>
