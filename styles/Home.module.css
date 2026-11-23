@@ -22,18 +22,44 @@
 
 /* ---- hero ---- */
 
+/* Text on the left, profile photo on the right */
 .hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  align-items: start;
+  gap: 3rem;
+}
+
+.heroText {
   max-width: 760px;
 }
 
+.photo {
+  position: relative;
+  width: 260px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  /* top edge lines up with the headline; one quiet outline, no floating shadow */
+  margin-top: 3.25rem;
+  background: var(--soft);
+  box-shadow: 0 0 0 1px var(--line);
+}
+
+.photo img {
+  object-fit: cover;
+}
+
 .hello {
-  margin: 0 0 0.75rem;
-  font-size: 1.15rem;
+  margin: 0 0 0.9rem;
+  font-size: clamp(1.55rem, 4vw, 2rem);
 }
 
 .pronunciation {
+  display: inline-block; /* wraps as a whole, never mid-word */
+  white-space: nowrap;
   margin-left: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-style: italic;
   color: var(--muted);
 }
@@ -89,7 +115,7 @@
   padding: 0.3rem 0.75rem;
   border-radius: 999px;
   background: rgba(22, 163, 74, 0.1);
-  color: var(--ok);
+  color: #166534; /* darker than the dot, so the text passes WCAG AA (about 6.5:1) */
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -346,6 +372,23 @@ a.card:hover h3 {
 /* ---- small screens ---- */
 
 @media (max-width: 760px) {
+  /* photo becomes a smaller circle above the text */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .photo {
+    order: -1;
+    width: 112px;
+    margin-top: 0;
+  }
+
+  /* the title wraps on its own on narrow screens */
+  .titleBreak {
+    display: none;
+  }
+
   .main {
     padding-top: 2.5rem;
   }
@@ -368,6 +411,12 @@ a.card:hover h3 {
 }
 
 @media (max-width: 480px) {
+  /* pronunciation on its own line, aligned with the text edge */
+  .pronunciation {
+    display: block;
+    margin: 0.25rem 0 0;
+  }
+
   .clients {
     grid-template-columns: 1fr;
   }

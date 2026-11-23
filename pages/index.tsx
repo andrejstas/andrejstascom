@@ -148,45 +148,53 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <header className={styles.hero}>
-          <p className={styles.hello}>
-            Hi 👋 I&rsquo;m <strong>Andrej Staš</strong>
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            <span className={styles.pronunciation}>(&ldquo;Ahn-dray Stahsh&rdquo;)</span>
-          </p>
-          <h1 className={styles.title}>Senior React &amp; React Native Engineer</h1>
-          <p className={styles.lead}>
-            Nearly 20 years of building web products, 7+ years of React. At Nearform I build the{" "}
-            <strong>Virgin Media O2</strong> React Native apps used by millions of customers in the UK. I
-            work <strong>AI-first</strong>: Claude Code every day, and I build LLM tools myself.
-          </p>
+          <div className={styles.heroText}>
+            <p className={styles.hello}>
+              Hi 👋 I&rsquo;m <strong>Andrej Staš</strong>
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
+              <span className={styles.pronunciation}>(&ldquo;Ahn-dray Stahsh&rdquo;)</span>
+            </p>
+            <h1 className={styles.title}>
+              Senior React &amp;
+              <br className={styles.titleBreak} /> React Native Engineer
+            </h1>
+            <p className={styles.lead}>
+              Nearly 20 years of building web products, 7+ years of React. At Nearform I build the{" "}
+              <strong>Virgin Media O2</strong> React Native apps used by millions of customers in the UK. I
+              work <strong>AI-first</strong>: Claude Code every day, and I build LLM tools myself.
+            </p>
 
-          <div className={styles.factsRow}>
-            {OPEN_TO_WORK && <span className={styles.open}>Open to senior remote roles</span>}
-            <ul className={styles.facts}>
-              <li>Prague, Czech Republic</li>
-              <li>CET</li>
-              <li>Remote</li>
-              <li>EU citizen</li>
+            <div className={styles.factsRow}>
+              {OPEN_TO_WORK && <span className={styles.open}>Open to senior remote roles</span>}
+              <ul className={styles.facts}>
+                <li>Prague, Czech Republic</li>
+                <li>CET</li>
+                <li>Remote</li>
+                <li>EU citizen</li>
+              </ul>
+            </div>
+
+            <div className={styles.actions}>
+              <a className={`${styles.button} ${styles.primary}`} href={email ? `mailto:${email}` : undefined}>
+                Email me
+              </a>
+              <a className={styles.button} href={LINKEDIN} target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+              <a className={styles.button} href={GITHUB} target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+            </div>
+
+            <ul className={styles.stack} aria-label="Main stack">
+              {STACK.map((s) => (
+                <li key={s}>{s}</li>
+              ))}
             </ul>
           </div>
-
-          <div className={styles.actions}>
-            <a className={`${styles.button} ${styles.primary}`} href={email ? `mailto:${email}` : undefined}>
-              Email me
-            </a>
-            <a className={styles.button} href={LINKEDIN} target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-            <a className={styles.button} href={GITHUB} target="_blank" rel="noreferrer">
-              GitHub
-            </a>
+          <div className={styles.photo}>
+            <NImage src="/andrej-stas.jpg" alt="Andrej Staš" fill priority sizes="(max-width: 760px) 112px, 260px" />
           </div>
-
-          <ul className={styles.stack} aria-label="Main stack">
-            {STACK.map((s) => (
-              <li key={s}>{s}</li>
-            ))}
-          </ul>
         </header>
 
         <section className={styles.section}>
