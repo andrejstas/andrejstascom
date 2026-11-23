@@ -36,3 +36,5 @@ yarn-error.log*
 
 # IDE
 .idea
+# local Dev dashboard config
+project.json
