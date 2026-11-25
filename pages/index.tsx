@@ -31,7 +31,7 @@ const CLIENTS = [
   {
     name: "Virgin Media O2",
     logo: "/clients/vm.png",
-    url: "https://www.virginmediao2.co.uk/",
+    url: "https://www.o2.co.uk/",
     what: "React Native apps used by millions",
     via: "Nearform",
   },
